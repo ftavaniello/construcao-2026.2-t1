@@ -10,11 +10,9 @@
 
 | Membro | E-mail | Github | Papel | Matrícula |
 |--------|--------|--------|-------|-----------|
-| Flávia Tavaniello | [f.tavaniello@edu.pucrs.br] | [ftavaniello](https://github.com/ftavaniello) | [papel] | [21102118] |
-|--------|--------|--------|-------|-----------|
-| Helena Pacheco | [helena.pacheco002@edu.pucrs.br] | [nenacpacheco](https://github.com/nenacpacheco) | [papel] | [24102311] |
-|--------|--------|--------|-------|-----------|
-| Gustavo Trevisol | [f.tavaniello@edu.pucrs.br] | [ftavaniello](https://github.com/nenacpacheco) | [papel] | [matricula] |
+| Flávia Tavaniello | [f.tavaniello@edu.pucrs.br] | [ftavaniello](https://github.com/ftavaniello) | [dev] | [21102118] |
+| Helena Pacheco | [helena.pacheco002@edu.pucrs.br] | [nenacpacheco](https://github.com/nenacpacheco) | [dev] | [24102311] |
+| Gustavo Trevisol | [gustavo.trevisol@edu.pucrs.br] | [GustavoTrevisol](https://github.com/GustavoTrevisol) | [dev] | [24102303] |
 
 ### Conheça nossa documentação
 * [Documentação completa](https://profschardosim.github.io/construcao-2026.2-t1/)
