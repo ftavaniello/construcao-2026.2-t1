@@ -4,41 +4,58 @@
 
 |Data|Versão|Descrição|Autor|
 | - | - | - | - |
-|[dd/mm/aaaa]|0.1|Versão inicial|[Nome do autor]|
+|27/08/2026|0.1|Versão inicial dos requisitos do Performance Lab|Equipe do projeto|
 
 ## **1. Introdução**
 
 ### **1.1 Propósito**
-[Explique o objetivo deste documento: especificar os requisitos funcionais e não funcionais do sistema [Nome do Projeto], servindo de referência para o desenvolvimento e a validação da solução.]
+Este documento tem como objetivo especificar os requisitos funcionais e não funcionais do sistema Performance Lab, servindo como referência para o desenvolvimento, validação e evolução da solução.
 
 ### **1.2 Escopo**
-[Descreva, em poucas frases, o que o sistema [Nome do Projeto] faz, qual problema resolve e para quem é destinado.]
+O sistema permite que personal trainers organizem treinos, acompanhem o progresso dos alunos e reduzam riscos de lesões por excesso de carga ou ausência de descanso. Também oferece ao aluno uma rotina clara, com registro de exercícios, cargas e acompanhamento de evolução.
 
 ### **1.3 Definições, Acrônimos e Abreviações**
 
 |Termo|Definição|
 | - | - |
-|[Termo/Sigla]|[Definição]|
+|PT|Personal Trainer|
+|Aluno|Usuário que realiza o treino|
+|Treino|Plano de exercícios semanal ou mensal|
+|Carga|Peso, intensidade ou esforço registrado durante o exercício|
 
 ### **1.4 Referências**
-[Liste os documentos e fontes utilizados na elicitação dos requisitos — ex.: entrevistas com stakeholders, documento de arquitetura, normas aplicáveis.]
+- Documento de visão do projeto Performance Lab
+- Material da disciplina de Construção de Software
+- Estudo de caso sobre acompanhamento de alunos e gestão de academias
 
 ## **2. Descrição Geral**
 
 ### **2.1 Perspectiva do Produto**
-[Descreva se o sistema é novo, se substitui outro ou se integra a sistemas já existentes.]
+O sistema é uma aplicação nova, voltada para gestão de treinos e acompanhamento de desempenho em academias. Ele substitui o uso de planilhas, cadernos e mensagens informais, centralizando informações em um único ambiente.
 
 ### **2.2 Funções do Produto**
-[Resuma, em alto nível, as principais funcionalidades do sistema.]
+O produto deve permitir:
+- cadastro de alunos
+- criação e organização de treinos
+- acompanhamento de cargas, séries e repetições
+- monitoramento de evolução ao longo do tempo
+- alertas de risco por sobrecarga ou descanso insuficiente
+- comunicação entre personal trainer e aluno
 
 ### **2.3 Características dos Usuários**
-[Descreva os perfis/personas que utilizarão o sistema e seu nível de conhecimento técnico.]
+Os usuários são principalmente:
+- personal trainers, que utilizam o sistema para planejar e controlar o treinamento dos alunos;
+- alunos, que acompanham a rotina de treino e registram as cargas executadas.
 
 ### **2.4 Restrições**
-[Liste restrições técnicas, legais, de negócio ou de prazo que limitam as soluções possíveis.]
+- O sistema deve ser simples de usar para pessoas com pouco domínio tecnológico.
+- Deve garantir segurança das informações pessoais e de acompanhamento físico.
+- O produto deve se adequar ao contexto de academias e treinamento individualizado.
 
 ### **2.5 Suposições e Dependências**
-[Liste suposições feitas durante a elicitação dos requisitos e dependências externas do projeto.]
+- O personal trainer é responsável pela criação e ajuste do treino.
+- O aluno pode registrar informações do treino no dia a dia.
+- Os usuários possuem acesso a um dispositivo com internet para uso do sistema.
 
 ## **3. Requisitos Funcionais**
 
@@ -46,10 +63,18 @@ Requisitos funcionais descrevem **o que o sistema deve fazer**.
 
 | ID | Descrição | Prioridade |
 | -- | --------- | :--------: |
-| RF01 | [O sistema deve permitir que o usuário...] | Alta |
-| RF02 | [O sistema deve...] | Média |
+| RF01 | O sistema deve permitir o cadastro de alunos com dados básicos e objetivos de treino. | Alta |
+| RF02 | O sistema deve permitir ao personal trainer criar e editar treinos personalizados. | Alta |
+| RF03 | O sistema deve permitir que o aluno visualize sua rotina semanal de treinos. | Alta |
+| RF04 | O sistema deve registrar cargas, séries e repetições informadas pelo aluno. | Alta |
+| RF05 | O sistema deve armazenar o histórico de progresso de cada aluno ao longo do tempo. | Alta |
+| RF06 | O sistema deve apresentar indicadores de evolução de desempenho. | Média |
+| RF07 | O sistema deve emitir alertas quando houver risco de sobrecarga, lesão ou ausência de recuperação adequada. | Alta |
+| RF08 | O sistema deve permitir a comunicação entre personal trainer e aluno dentro da plataforma. | Média |
+| RF09 | O sistema deve permitir que o personal trainer acompanhe a execução dos treinos por aluno. | Alta |
+| RF10 | O sistema deve permitir ajustes na rotina do treino conforme evolução ou necessidade do aluno. | Média |
 
-> **Prioridade:** Alta, Média ou Baixa — defina o critério utilizado pela equipe (ex.: MoSCoW).
+> **Prioridade:** Alta, Média ou Baixa, conforme impacto direto no objetivo do produto e na redução dos problemas de acompanhamento e lesões.
 
 ## **4. Requisitos Não Funcionais**
 
@@ -57,18 +82,32 @@ Requisitos não funcionais descrevem **qualidades e restrições técnicas** do 
 
 | ID | Categoria | Descrição | Prioridade |
 | -- | --------- | --------- | :--------: |
-| RNF01 | [Desempenho] | [O sistema deve responder a requisições em até X segundos.] | Alta |
-| RNF02 | [Segurança] | [O sistema deve autenticar os usuários via...] | Alta |
-| RNF03 | [Usabilidade] | [O sistema deve...] | Média |
+| RNF01 | Desempenho | O sistema deve responder às ações do usuário em tempo adequado para uso diário. | Alta |
+| RNF02 | Segurança | O sistema deve autenticar usuários e proteger dados sensíveis. | Alta |
+| RNF03 | Usabilidade | A interface deve ser intuitiva para personal trainers e alunos sem grande experiência digital. | Alta |
+| RNF04 | Disponibilidade | O sistema deve estar acessível sempre que o usuário precisar consultar ou registrar treino. | Média |
+| RNF05 | Manutenibilidade | O código deve ser organizado para facilitar alterações futuras e evolução do produto. | Alta |
+| RNF06 | Confiabilidade | O sistema deve preservar registros de treino e evolução para manter rastreabilidade do acompanhamento. | Alta |
 
 ## **5. Regras de Negócio**
 
-[Liste as regras de negócio que restringem ou orientam o comportamento do sistema, independentemente de um requisito funcional específico.]
-
 | ID | Descrição |
 | -- | --------- |
-| RN01 | [Descrição da regra de negócio] |
+| RN01 | Cada aluno deve estar vinculado a um personal trainer responsável. |
+| RN02 | O personal trainer é responsável por criar e ajustar o treinamento do aluno. |
+| RN03 | O aluno pode registrar apenas o desempenho do treino atribuído ao seu plano atual. |
+| RN04 | O sistema deve considerar a recuperação e o descanso como fatores para alertar sobre riscos de lesão. |
+| RN05 | Treinos repetidos sem variação e sem descanso adequado devem ser sinalizados como potencialmente prejudiciais. |
+| RN06 | A evolução do aluno deve ser registrada e consultada no histórico do sistema. |
 
 ## **6. Protótipos**
+Os protótipos podem incluir telas de:
+- login
+- dashboard do personal trainer
+- cadastro de alunos
+- criação de treino
+- acompanhamento do aluno
+- histórico de progresso
+- alertas de segurança
 
-[Insira aqui links ou imagens dos protótipos/wireframes que ilustram os requisitos funcionais.]
+A implementação pode evoluir para incluir imagens, wireframes ou links de protótipos no futuro.
