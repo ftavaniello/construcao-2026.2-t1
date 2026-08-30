@@ -28,7 +28,7 @@ O sistema conecta duas pontas, portanto, possui dois públicos complementares:
 | Gustavo Trevisol | gustavo.trevisol@edu.pucrs.br | [GustavoTrevisol](https://github.com/GustavoTrevisol) | dev | 24102303 |
 
 ### Conheça nossa documentação
-* [Documentação completa](https://profschardosim.github.io/construcao-2026.2-t1/)
+* [Documentação completa](docs/index.md)
 
 ---
 
