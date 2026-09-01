@@ -5,6 +5,7 @@
 |Data|Versão|Descrição|Autor|
 | - | - | - | - |
 |27/08/2026|0.1|Versão inicial dos requisitos do Performance Lab|Equipe do projeto|
+|01/09/2026|0.2|Adição da funcionalidade de organização autônoma dos dias de treino pelo aluno, com validação inteligente de combinações desconfortáveis ou lesivas|Equipe do projeto|
 
 ## **1. Introdução**
 
@@ -37,6 +38,8 @@ O sistema é uma aplicação nova, voltada para gestão de treinos e acompanhame
 O produto deve permitir:
 - cadastro de alunos
 - criação e organização de treinos
+- organização autônoma, pelo aluno, dos dias da semana em que cada treino será realizado
+- validação inteligente das combinações de treinos escolhidas pelo aluno, impedindo arranjos desconfortáveis ou lesivos
 - acompanhamento de cargas, séries e repetições
 - monitoramento de evolução ao longo do tempo
 - alertas de risco por sobrecarga ou descanso insuficiente
@@ -55,6 +58,7 @@ Os usuários são principalmente:
 ### **2.5 Suposições e Dependências**
 - O personal trainer é responsável pela criação e ajuste do treino.
 - O aluno pode registrar informações do treino no dia a dia.
+- O aluno pode distribuir os treinos já definidos pelo personal trainer entre os dias da semana de sua preferência, respeitando as validações automáticas do sistema.
 - Os usuários possuem acesso a um dispositivo com internet para uso do sistema.
 
 ## **3. Requisitos Funcionais**
@@ -73,6 +77,8 @@ Requisitos funcionais descrevem **o que o sistema deve fazer**.
 | RF08 | O sistema deve permitir a comunicação entre personal trainer e aluno dentro da plataforma. | Média |
 | RF09 | O sistema deve permitir que o personal trainer acompanhe a execução dos treinos por aluno. | Alta |
 | RF10 | O sistema deve permitir ajustes na rotina do treino conforme evolução ou necessidade do aluno. | Média |
+| RF11 | O sistema deve permitir que o aluno organize e distribua seus treinos nos dias da semana de sua preferência. | Alta |
+| RF12 | O sistema deve impedir automaticamente combinações de treinos, em um mesmo dia ou em dias consecutivos, consideradas desconfortáveis ou com risco de lesão, sugerindo ao aluno um rearranjo adequado. | Alta |
 
 > **Prioridade:** Alta, Média ou Baixa, conforme impacto direto no objetivo do produto e na redução dos problemas de acompanhamento e lesões.
 
@@ -99,6 +105,8 @@ Requisitos não funcionais descrevem **qualidades e restrições técnicas** do 
 | RN04 | O sistema deve considerar a recuperação e o descanso como fatores para alertar sobre riscos de lesão. |
 | RN05 | Treinos repetidos sem variação e sem descanso adequado devem ser sinalizados como potencialmente prejudiciais. |
 | RN06 | A evolução do aluno deve ser registrada e consultada no histórico do sistema. |
+| RN07 | O aluno pode escolher livremente em quais dias da semana realizar cada treino atribuído pelo personal trainer, sem alterar o conteúdo (exercícios, séries, cargas) definido pelo treino. |
+| RN08 | O sistema deve bloquear ou alertar a tentativa de agendar, no mesmo dia ou em dias consecutivos sem descanso mínimo, treinos que trabalhem o mesmo grupo muscular ou que sejam classificados como incompatíveis, impedindo a confirmação do arranjo até que o conflito seja resolvido. |
 
 ## **6. Protótipos**
 Os protótipos podem incluir telas de:
@@ -106,6 +114,7 @@ Os protótipos podem incluir telas de:
 - dashboard do personal trainer
 - cadastro de alunos
 - criação de treino
+- organização semanal dos treinos pelo aluno, com alerta de combinações inválidas
 - acompanhamento do aluno
 - histórico de progresso
 - alertas de segurança
